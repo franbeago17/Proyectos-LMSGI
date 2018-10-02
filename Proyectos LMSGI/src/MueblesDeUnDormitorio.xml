@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<muebles>
+	<especificaciones>
+			<pieza modelo="Litera" material="Roble" color="Caoba" precio="395€"/>
+			<pieza modelo="Escritotio" material="Encina" color="Nogal" precio="165€"/>
+			<pieza modelo="Armario" material="Cedro" color="Roble claro" precio="255€"/>
+			<pieza modelo="Mesita de noche" material="Aglomerado" color="Beige" precio="85€"/>
+	</especificaciones>
+</muebles>

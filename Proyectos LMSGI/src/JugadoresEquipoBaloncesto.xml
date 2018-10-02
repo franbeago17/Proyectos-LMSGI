@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<equipos>
+	<equipo primero="Real Madrid">
+		<jugadores>
+			<jugador nombre="Campazzo" dorsal="7" pais="Argentina"/>
+			<jugador nombre="Llull" dorsal="23" pais="España"/>
+			<jugador nombre="Carroll" dorsal="20" pais="EE.UU"/>
+			<jugador nombre="Prepelic" dorsal="25" pais="Elovenia"/>
+			<jugador nombre="Rudy" dorsal="5" pais="España"/>
+			<jugador nombre="Causeur" dorsal="1" Pais="Francia"/>
+		</jugadores>
+	</equipo>
+</equipos>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE placasBase SYSTEM "Ejercicio1.dtd">
+
+<placasBase>
+	<placa>
+		<componentes>
+			<microprocesador>CPU LGA1151 Intel Core 8ª Generacion</microprocesador>
+			<memoria>64gb</memoria>
+			<modelo>TUF H370-PRO Gaming</modelo>
+			<fabricante><Asus/></fabricante>
+		</componentes>
+	</placa>
+	<placa>
+		<componentes>
+			<microprocesador>CPU LGA1151 Serial ATA III</microprocesador><
+			<memoria>64gb</memoria>
+			<modelo>Gigabyte GA-H110M-S2H</modelo>
+			<fabricante><Intel/></fabricante>
+		</componentes>
+	</placa>
+</placasBase>

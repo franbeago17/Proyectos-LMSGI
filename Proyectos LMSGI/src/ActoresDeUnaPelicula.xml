@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cartelera>
+	<pelicula Nombre="La Monja">
+		<actores>
+			<actor nombre="Carlos Córdoba" edad="23 años" personaje="La monja" sexo="Masculino"/>
+			<actor nombre="Daniel Servián" edad="20 años" personaje="Sacerdote" sexo="Masculino"/>
+			<actor nombre="Isabel Molina" edad="17 años" personaje="Lorraine Warren" sexo="Femenino"/>
+			<actor nombre="Jorge Ruiz" edad="18 años" personaje="Ed Warren" sexo="Masculino"/>
+		</actores>
+	</pelicula>
+</cartelera>

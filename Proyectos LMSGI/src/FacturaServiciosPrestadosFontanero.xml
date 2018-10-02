@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<factura>
+	<informacionCliente nombre="Carlos Córdoba" direccion="C/Las Viñas Nº101"/>
+	<informacionEspecialista nombre="Daniel Medina" direccionOficina="C/Las Palmas Nº15"/>
+	<servicios>
+		<reparacion arreglo="Cisterna" precio="80€"/>
+		<reparacion arreglo="Tubería del Lavabo" precio="45€"/>
+		<reparacion union="Tuberías desagüe" precio="25€"/>
+	</servicios>
+</factura>

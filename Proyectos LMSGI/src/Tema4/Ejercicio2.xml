@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE emails SYSTEM "Ejercicio2.dtd">
+
+<emails>
+	<email>
+		<para>carloscordobita@gmail.com</para>
+		<cc>javitruji99@gmail.com</cc>
+		<cco>danimedina@gmail.com</cco>
+		<asunto>hola</asunto>
+		<texto>Aquí teneis campeones</texto>
+		<adjunto>
+			<nombre>Nuestra fiesta.jpg</nombre>
+			<mine-type>image/jpeg</mine-type>
+			<longitud>8596KB</longitud>
+		</adjunto>
+	</email>
+</emails>
