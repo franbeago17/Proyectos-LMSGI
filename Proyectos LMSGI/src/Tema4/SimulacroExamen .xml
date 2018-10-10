@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE trofeosFutbolyGanadores [
+<!ELEMENT trofeosFutbolyGanadores (trofeos?, ganadores+)*>
+<!ELEMENT trofeos (champions, liga, copaDelRey)*>
+<!ELEMENT ganadores EMPTY>
+<!ELEMENT champions (#PCDATA)>
+<!ELEMENT liga (#PCDATA)>
+<!ELEMENT copaDelRey (#PCDATA)>
+<!ENTITY % caracteristicas "<!ATTLIST ganadores nombre CDATA #IMPLIED 
+												añoNacimiento (1960 | 1961 | 1962 | 1963 | 1964 | 1965) #REQUIRED
+												equipo NMTOKENS #IMPLIED
+												codigo ID #REQUIRED
+												estado NMTOKEN #FIXED 'retirado'>">
+<!ATTLIST liga codigoDeReferencia IDREFS #REQUIRED>
+<!ATTLIST champions codigoDeReferencia IDREFS #REQUIRED>
+<!ATTLIST copaDelRey codigoDeReferencia IDREF #REQUIRED>
+%caracteristicas;
+]>
+<trofeosFutbolyGanadores>
+	<trofeos>
+		<champions codigoDeReferencia= "ARM MB">Ganada por Asensio y Messi </champions>
+		<liga codigoDeReferencia= "GAM MB ARM">Ganada por Asensio, Messi y Griezman</liga>
+		<copaDelRey codigoDeReferencia= "GAM">Ganada por Griezman </copaDelRey>
+	</trofeos>
+	<ganadores nombre= "Asensio" añoNacimiento= "1960" equipo= "Real Madrid" codigo= "ARM" estado= "retirado"/>
+	<ganadores nombre= "Messi" añoNacimiento= "1962" equipo= "Barcelona" codigo= "MB" estado= "retirado"/>
+	<ganadores nombre= "Griezman" añoNacimiento= "1964" equipo= "Atletico de Madrid" codigo= "GAM" estado= "retirado"/>
+</trofeosFutbolyGanadores>
