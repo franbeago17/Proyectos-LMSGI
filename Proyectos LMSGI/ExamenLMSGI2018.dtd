@@ -1,0 +1,20 @@
+<!ELEMENT onePiece (personajes*, combatesGanados, combatesGrupalesGanados*)>
+<!ELEMENT personajes (personalidad+, ambiciones?, (lugarNacimiento | rutaTomada)*)*>
+<!ELEMENT combatesGanados EMPTY>
+<!ELEMENT combatesGrupalesGanados EMPTY>
+<!ELEMENT personalidad (#PCDATA)>
+<!ELEMENT ambiciones (#PCDATA|posibilidades)*>
+<!ELEMENT posibilidades (#PCDATA)>
+<!ELEMENT lugarNacimiento (#PCDATA)>
+<!ELEMENT rutaTomada (#PCDATA)>
+<!ENTITY % caracteristicas "<!ATTLIST personajes nombre CDATA #REQUIRED
+												puestoTripulacion CDATA #IMPLIED
+												edad (17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25) #IMPLIED
+												codigo ID #REQUIRED
+												estadoTripulacion NMTOKEN #FIXED 'activo'>">
+<!ENTITY ruta "El Grand Line.">
+<!ATTLIST combatesGanados victorias CDATA #REQUIRED
+						  codigoReferencia IDREF #REQUIRED>
+<!ATTLIST combatesGrupalesGanados victoriasGrupales CDATA #REQUIRED
+								  codigoReferenciaGrupal IDREFS #REQUIRED>
+%caracteristicas;

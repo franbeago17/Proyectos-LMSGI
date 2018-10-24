@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE onePiece SYSTEM "ExamenLMSGI2018.dtd">
+
+<onePiece>
+	<personajes nombre= "Moenkey D. Luffy" edad= "17" puestoTripulacion= "Capitán" codigo= "MDL" estadoTripulacion= "activo">
+		<personalidad>Agresiva</personalidad>
+		<ambiciones>
+			Llegar a ser el Rey de los Piratas.
+			<posibilidades>Muchas</posibilidades>
+		</ambiciones>
+		<rutaTomada>&ruta;</rutaTomada>
+	</personajes>
+	<personajes nombre= "Roronoa Zoro" edad= "23" puestoTripulacion= "Espadachín" codigo= "RZ" estadoTripulacion= "activo">
+		<personalidad>Agresiva</personalidad>
+		<ambiciones>
+			Llegar a ser el mejor espadachín del mundo.
+			<posibilidades>Muchas</posibilidades>
+		</ambiciones>
+		<lugarNacimiento>Suroeste de la Península.</lugarNacimiento>
+	</personajes>
+	<personajes nombre= "Nami" edad= "21" puestoTripulacion= "Vigía" codigo= "N" estadoTripulacion= "activo">
+		<personalidad>Calmada</personalidad>
+		<rutaTomada>&ruta;</rutaTomada>
+	</personajes>
+	<personajes nombre= "Nico Robin" edad= "19" puestoTripulacion= "Vigilante" codigo= "NR" estadoTripulacion= "activo">
+		<personalidad>Amable</personalidad>
+		<rutaTomada>&ruta;</rutaTomada>
+	</personajes>
+	<personajes nombre= "Kuroashi no Sanji" edad= "25" puestoTripulacion= "Cocinero" codigo= "KNS" estadoTripulacion= "activo">
+		<personalidad>Agresiva</personalidad>
+		<ambiciones>
+			Llegar a ser el mejor cocinero del mundo.
+			<posibilidades>Muchas</posibilidades>
+		</ambiciones>
+		<lugarNacimiento>Este de la Península.</lugarNacimiento>
+	</personajes>
+	<combatesGanados victorias= "56" codigoReferencia= "MDL"/>
+	<combatesGrupalesGanados victoriasGrupales= "32" codigoReferenciaGrupal= "MDL KNS"/>
+</onePiece>

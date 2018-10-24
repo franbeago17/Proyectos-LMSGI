@@ -10,7 +10,7 @@
 <!ENTITY % caracteristicas "<!ATTLIST ganadores nombre CDATA #REQUIRED 
 												añoNacimiento (1960 | 1961 | 1962 | 1963 | 1964 | 1965) #IMPLIED
 												codigo ID #REQUIRED
-												estado NMTOKEN #FIXED 'activo'>">
+												estado NMTOKEN #FIXED 'activo'>">     <!--Si aparece tiene que ser el valor dado(activo)-->
 <!ENTITY liga "Liga Española">
 <!ATTLIST liga codigoDeReferencia IDREFS #REQUIRED>
 <!ATTLIST champions codigoDeReferencia IDREFS #REQUIRED>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 
+ los comentarios son escritos entre los símbolos  <!--    -->.
+
+
 	? -> Un elemento puede aparecer 0 ó 1 vez.
 	* -> Un elemento puede aparecer de 0 a una cantidad ilimitada de veces.
 	+ -> Un elemento puede aparecer de 1 a una cantidad ilimitada de veces.
@@ -41,3 +44,57 @@
 	NMTOKENS. Lista de nombres con espacios en blanco en su interior.
 	
 	NOTATION. Notación, que debe ser declarada en el DTD.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	Entidad general interna. Sirve para crear un alias dentro del mismo fichero DTD. Ejemplo:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ELEMENT marvel (superheroe*)>
+  <!ELEMENT superheroe (#PCDATA)>
+  <!ENTITY marvel "Ediciones Marvel">
+]>
+<marvel>
+  <superheroe>Thor el de &marvel;</superheroe>
+  <superheroe>Hulk</superheroe>
+<superheroe>Iron Man</superheroe>
+</marvel>
+
+
+
+
+
+
+
+
+Entidad parámetro. La entidad es en realidad un alias para un código que utilizamos dentro del mismo DTD. Esto es muy utilizado para la reutilización de atributos entre varios elementos. Ejemplo:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marvel [
+  <!ENTITY marvel "Ediciones Marvel">
+  <!ENTITY vengadores SYSTEM "superheroes.txt">
+  <!ENTITY % caracteristicasHeroe "<!ATTLIST superheroe nombre CDATA #REQUIRED color CDATA #IMPLIED>">
+
+  <!ELEMENT marvel (superheroe)>
+  <!ELEMENT superheroe (#PCDATA)>
+  %caracteristicasHeroe;
+]>
+<marvel>
+  <superheroe nombre="Thor" color="azul">Su historia es muy buena</superheroe>
+</marvel>
+
+
+
+
+
+
+
+
+
