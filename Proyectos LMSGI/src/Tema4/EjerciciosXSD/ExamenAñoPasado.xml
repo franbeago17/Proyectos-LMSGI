@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<muebles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ExamenAñoPasado.xsd">
+	<mesas material="Madera"> Hay muchos materiales disponibles
+		<mesa tipo="Mesita de noche" color="Ocre" unidadesVendidas="4"/>
+	</mesas>
+	<silla tipo="Silla de comedor">25</silla>
+	<armarios>
+		<!-- <armario material="madera"/> -->
+		<perchero numeroPerchas="8"/>
+	</armarios>
+	<cama medidas="90X90"/>
+	<comoda dimension="XL 5 120 10 L"/>
+	<estanteria localizacion="En el centro de la pared">
+ 		<dimensiones>200x120</dimensiones>
+ 		<material>Madera de abeto</material>
+ 	</estanteria>
+</muebles>

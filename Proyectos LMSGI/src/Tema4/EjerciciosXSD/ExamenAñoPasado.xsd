@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="muebles" type="tipoMuebles"/>
+	
+	<xs:complexType name="tipoMuebles">
+		<xs:sequence>
+			<xs:element name="mesas" type="tipoMesas"/>
+			<xs:element name="silla" type="tipoSilla"/>
+			<xs:element name="armarios" type="tipoArmarios" maxOccurs="unbounded"/>
+			<xs:element name="cama" type="tipoCamas" maxOccurs="unbounded"/>
+			<xs:element name="comoda" type="tipoComodas" maxOccurs="unbounded"/>
+			<xs:element name="estanteria" type="tipoEstanterias" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoEstanteria">
+		<xs:all>
+			<xs:element name="dimensiones" type="xs:string"/>
+			<xs:element name="material" type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoEstanterias">
+		<xs:complexContent>
+			<xs:extension base="tipoEstanteria">
+				<xs:attribute name="localizacion" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoComodas">
+  		<xs:attribute name="dimension" type="dimensiones"/>
+	</xs:complexType>
+  
+  
+	<xs:simpleType name="dimension0-1000">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+  
+	<xs:simpleType name="dimension0-150">
+		<xs:restriction base="dimension0-1000">
+			<xs:maxInclusive value="150"/>
+		</xs:restriction>
+	</xs:simpleType>
+  
+  
+	<xs:simpleType name="dimensionDescrita">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="L"/>
+			<xs:enumeration value="XL"/>
+		</xs:restriction>
+	</xs:simpleType>
+  
+  
+	<xs:simpleType name="dimension">
+		<xs:union memberTypes="dimension0-150 dimensionDescrita"/>
+	</xs:simpleType>
+  
+  
+	<xs:simpleType name="dimensiones">
+		<xs:list itemType="dimension"/>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipoCamas">
+	 	<xs:attribute name="medidas">
+	 		<xs:simpleType>
+	 			<xs:restriction base="xs:string">
+	 				<xs:pattern value="[0-9]{2}[X][0-9]{2}"/>
+	 			</xs:restriction>
+	 		</xs:simpleType>
+	 	</xs:attribute>
+	 </xs:complexType>
+	
+	<xs:complexType name="tipoArmarios">
+		<xs:choice>
+			<xs:element name="armarios">
+				<xs:complexType>
+					<xs:attribute name="material">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="contrachapado"/>
+								<xs:enumeration value="madera"/>
+								<xs:enumeration value="ocumen"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="perchero">
+				<xs:complexType>
+					<xs:attribute name="numeroPerchas">
+						<xs:simpleType>
+							<xs:restriction base="xs:integer">
+								<xs:minInclusive value="0"/>
+								<xs:maxInclusive value="100"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoSilla">
+		<xs:simpleContent>
+	     	<xs:extension base="xs:integer">
+	        	<xs:attribute name="tipo" type="xs:string" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoMesas" mixed="true">
+		<xs:sequence>
+			<xs:element name="mesa" type="tipoMesa" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="material" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoMesa">
+		<xs:attribute name="tipo" type="xs:string"/>
+		<xs:attribute name="color" type="xs:string"/>
+		<xs:attribute name="unidadesVendidas" type="xs:integer"/>
+	</xs:complexType>
+</xs:schema>
