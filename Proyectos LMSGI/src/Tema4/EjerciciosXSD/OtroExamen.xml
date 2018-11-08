@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<losSimpsons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="OtroExamen.xsd">
+	<localidad valor="Springfield" añoFundacion="1800"/>
+	<pelicula>Estreno el dia 15-03-2012
+		<titulo>Los Simpsons la pelicula</titulo>
+	</pelicula>
+	<creador bso="Danny Elfman">Matt Groening</creador>
+	<familia nombre="Simpsons">5</familia>
+	<temporada>
+		<temporada01>Esta es la que mas me gusta ;P</temporada01>
+	<!--<temporada02/>
+		<temporada03/> -->
+	</temporada>
+	<personajes>
+		<Homer/>
+		<Marge/>
+		<Bart/>
+		<Lisa/>
+		<Maggie/>
+	</personajes>
+	<colorPersonajes principal="amarillo" rojo="120" verde="150" azul="170"/>
+	<MontgomeryBurns dni="12345678A" matricula="0001ABC" mac="14:e3:a5:34:87:ef" color="amarillo"/>
+	<localidadRival>Sevilla</localidadRival>
+	<localidadesAmigas>California Chicago Miami</localidadesAmigas>
+	<Barney bebidaDiaria="ron" bebidaFavorita="cerveza"/>
+	<Apu fechaNacimiento="7 de julio">
+		<apodo>El del Badulake</apodo>
+	</Apu>
+	<Manyula fechaNacimiento="4 de febrero" nacionalidad="india">
+		<apodo>La novia del que tiene el Badulake</apodo>
+		<DiosPreferido>Shiva</DiosPreferido>
+	</Manyula>
+	<Hugo>
+		<aficion></aficion>
+		<ladoCicatriz></ladoCicatriz>
+		<edad></edad>
+		<aficion></aficion>
+	</Hugo>
+</losSimpsons>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="losSimpsons" type="tipoSimpsons"/>
+
+	<xs:complexType name="tipoSimpsons">
+		<xs:sequence>
+			<xs:element name="localidad" type="tipoLocalidad"/>
+			<xs:element name="pelicula" type="tipoPelicula"/>
+			<xs:element name="creador" type="tipoCreador"/>
+			<xs:element name="familia" type="tipoFamilia"/>
+			<xs:element name="temporada" type="tipoTemporada"/>
+			<xs:element name="personajes" type="tipoPersonajes"/>
+			<xs:element name="colorPersonajes" type="tipoColorPersonajes"/>
+			<xs:element name="MontgomeryBurns" type="tipoMontgomeryBurns"/>
+			<xs:element name="localidadRival" type="tipoLocalidadRival"/>
+			<xs:element name="localidadesAmigas" type="tipoLocalidadesAmigas"/>
+			<xs:element name="Barney" type="tipoBarney"/>
+			<xs:element name="Apu" type="tipoApu"/>
+			<xs:element name="Manyula" type="tipoManyula"/>
+			<xs:element name="Hugo" type="tipoHugo"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoLocalidad">
+		<xs:attribute name="valor" type="xs:string"/>
+		<xs:attribute name="añoFundacion" type="xs:integer"/>
+	</xs:complexType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoPelicula"  mixed="true">
+		<xs:sequence>
+			<xs:element name="titulo" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoCreador" mixed="true">
+		<xs:attribute name="bso" type="xs:string"/>
+	</xs:complexType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoFamilia">
+		<xs:simpleContent>
+			<xs:extension base="xs:integer">
+				<xs:attribute name="nombre" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	
+	<!-- bebidaDiaria
+	 -->
+	<xs:complexType name="tipoTemporada">
+		<xs:choice>
+			<xs:element name="temporada01" type="xs:string"/>
+			<xs:element name="temporada02" type="xs:string"/>
+			<xs:element name="temporada03" type="xs:string"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoPersonajes">
+		<xs:all>
+			<xs:element name="Homer" type="tipoVacio"/>
+			<xs:element name="Marge" type="tipoVacio"/>
+			<xs:element name="Bart" type="tipoVacio"/>
+			<xs:element name="Lisa" type="tipoVacio"/>
+			<xs:element name="Maggie" type="tipoVacio"/>
+		</xs:all>
+	</xs:complexType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoColorPersonajes">
+		<xs:attribute name="principal">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="amarillo"/>
+					<xs:enumeration value="rojo"/>
+					<xs:enumeration value="verde"/>
+					<xs:enumeration value="azul"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="rojo" type="valorEntre100y1000"/>
+		<xs:attribute name="verde" type="valorEntre100y1000"/>
+		<xs:attribute name="azul" type="valorEntre100y1000"/>
+	</xs:complexType>
+	
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="valorEntre100y1000">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="100"/>
+			<xs:maxInclusive value="1000"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoMontgomeryBurns">
+		<xs:attribute name="dni" type="tipoDNI"/>
+		<xs:attribute name="matricula" type="tipoMatricula"/>
+		<xs:attribute name="mac" type="tipoMac"/>
+		<xs:attribute name="color" type="tipoColorBurns"/>
+	</xs:complexType>
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="tipoDNI">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{8}([A-Z]|[a-z])"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="tipoMatricula">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{4}[A-Z]{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="tipoMac">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9|a-f|A-F]{2}:){5}[0-9|a-f|A-F]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="tipoColorBurns">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="amarillo"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="estadosEEUU">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="California"/>
+			<xs:enumeration value="Chicago"/>
+			<xs:enumeration value="Miami"/>
+			<xs:enumeration value="Texas"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="localidadesEspaña">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Cordoba"/>
+			<xs:enumeration value="Malaga"/>
+			<xs:enumeration value="Sevilla"/>
+			<xs:enumeration value="Huelva"/>
+			<xs:enumeration value="Cadiz"/>
+			<xs:enumeration value="Granada"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="tipoLocalidadRival">
+		<xs:union memberTypes="estadosEEUU localidadesEspaña"/>
+	</xs:simpleType>
+	
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="tipoLocalidadesAmigas">
+		<xs:list itemType="estadosEEUU"/>
+	</xs:simpleType>
+	
+	
+	
+	
+	<!-- 
+	 -->
+	 <xs:complexType name="tipoBarney">
+	 	<xs:attribute name="bebidaDiaria" type="tipoBebidaDiaria"/>
+	 	<xs:attribute name="bebidaFavorita" type="tipoBebidaFavorita"/>
+	 </xs:complexType>
+	 
+	 
+	 
+	<!-- 
+	 -->
+	<xs:simpleType name="tipoBebidaDiaria">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ron"/>
+			<xs:enumeration value="whisky"/>
+			<xs:enumeration value="cerveza"/>
+			<xs:enumeration value="Vodka"/>
+			<xs:enumeration value="Vino"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!-- 
+	 -->
+	<xs:simpleType name="tipoBebidaFavorita">
+		<xs:restriction base="tipoBebidaDiaria">
+			<xs:enumeration value="cerveza"/>bebidaDiaria
+			<xs:enumeration value="Vodka"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoApu">
+		<xs:sequence>
+			<xs:element name="apodo" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="fechaNacimiento" type="xs:string"/>
+	</xs:complexType>
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoManyula">
+		<xs:complexContent>
+			<xs:extension base="tipoApu">
+				<xs:sequence>
+					<xs:element name="DiosPreferido" type="xs:string"/>
+				</xs:sequence>
+				<xs:attribute name="nacionalidad" type="xs:string"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	
+	
+	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoVacio"/>
+	
+	
+	
+	
+</xs:schema>
