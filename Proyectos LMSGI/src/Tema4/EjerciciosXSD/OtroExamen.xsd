@@ -22,12 +22,14 @@
 	</xs:complexType>
 	
 	
+	
 	<!-- 
 	 -->
 	<xs:complexType name="tipoLocalidad">
 		<xs:attribute name="valor" type="xs:string"/>
 		<xs:attribute name="añoFundacion" type="xs:integer"/>
 	</xs:complexType>
+	
 	
 	
 	<!-- 
@@ -39,11 +41,13 @@
 	</xs:complexType>
 	
 	
+	
 	<!-- 
 	 -->
 	<xs:complexType name="tipoCreador" mixed="true">
 		<xs:attribute name="bso" type="xs:string"/>
 	</xs:complexType>
+	
 	
 	
 	<!-- 
@@ -57,7 +61,8 @@
 	</xs:complexType>
 	
 	
-	<!-- bebidaDiaria
+	
+	<!-- 
 	 -->
 	<xs:complexType name="tipoTemporada">
 		<xs:choice>
@@ -66,6 +71,7 @@
 			<xs:element name="temporada03" type="xs:string"/>
 		</xs:choice>
 	</xs:complexType>
+	
 	
 	
 	<!-- 
@@ -79,6 +85,7 @@
 			<xs:element name="Maggie" type="tipoVacio"/>
 		</xs:all>
 	</xs:complexType>
+	
 	
 	
 	<!-- 
@@ -111,6 +118,7 @@
 	</xs:simpleType>
 	
 	
+	
 	<!-- 
 	 -->
 	<xs:complexType name="tipoMontgomeryBurns">
@@ -119,6 +127,7 @@
 		<xs:attribute name="mac" type="tipoMac"/>
 		<xs:attribute name="color" type="tipoColorBurns"/>
 	</xs:complexType>
+	
 	
 	
 	<!-- 
@@ -130,6 +139,7 @@
 	</xs:simpleType>
 	
 	
+	
 	<!-- 
 	 -->
 	<xs:simpleType name="tipoMatricula">
@@ -137,6 +147,7 @@
 			<xs:pattern value="[0-9]{4}[A-Z]{3}"/>
 		</xs:restriction>
 	</xs:simpleType>
+	
 	
 	
 	<!-- 
@@ -158,6 +169,7 @@
 	</xs:simpleType>
 	
 	
+	
 	<!-- 
 	 -->
 	<xs:simpleType name="estadosEEUU">
@@ -168,6 +180,7 @@
 			<xs:enumeration value="Texas"/>
 		</xs:restriction>
 	</xs:simpleType>
+	
 	
 	
 	<!-- 
@@ -184,11 +197,13 @@
 	</xs:simpleType>
 	
 	
+	
 	<!-- 
 	 -->
 	<xs:simpleType name="tipoLocalidadRival">
 		<xs:union memberTypes="estadosEEUU localidadesEspaña"/>
 	</xs:simpleType>
+	
 	
 	
 	
@@ -210,6 +225,7 @@
 	 
 	 
 	 
+	 
 	<!-- 
 	 -->
 	<xs:simpleType name="tipoBebidaDiaria">
@@ -223,14 +239,16 @@
 	</xs:simpleType>
 	
 	
+	
 	<!-- 
 	 -->
 	<xs:simpleType name="tipoBebidaFavorita">
 		<xs:restriction base="tipoBebidaDiaria">
-			<xs:enumeration value="cerveza"/>bebidaDiaria
+			<xs:enumeration value="cerveza"/>
 			<xs:enumeration value="Vodka"/>
 		</xs:restriction>
 	</xs:simpleType>
+	
 	
 	
 	<!-- 
@@ -241,6 +259,7 @@
 		</xs:sequence>
 		<xs:attribute name="fechaNacimiento" type="xs:string"/>
 	</xs:complexType>
+	
 	
 	
 	<!-- 
@@ -258,12 +277,20 @@
 	
 	
 	
+	<!-- 
+	 -->
+	<xs:complexType name="tipoHugo">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="aficion" type="xs:string" minOccurs="0"/>
+			<xs:element name="ladoCicatriz" type="xs:string" minOccurs="0"/>
+			<xs:element name="edad" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
 	
 	<!-- 
 	 -->
 	<xs:complexType name="tipoVacio"/>
-	
-	
-	
-	
+
 </xs:schema>
